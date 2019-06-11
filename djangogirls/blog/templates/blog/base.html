@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+<head>
+<title>Zzungsun's blog</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog_css.css' %}">
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet'>
+</head>
+<body>
+    	<div class="page-header">
+        <h1><a href="{% url 'post_list' %}">Zzungsun's Blog</a></h1>
+    	</div>
+    	<div class="content container">
+     	   <div class="row">
+		        <div class="col-md-8">
+    		    {% block content %} <!-- 본문을 제외한 베이스 파트 -->
+	        	{% endblock %}
+            	</div>
+			</div>
+    	</div>
+</body>
+</html>
